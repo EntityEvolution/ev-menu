@@ -120,6 +120,7 @@ function AbrirPersonalMenu()
             {label = _U('personal_info'), value = 'personal_info'},
             {label = _U('documents_info'), value = 'documents_info'},
             {label = _U('actions_info'), value = 'actions_info'},
+            {label = _U('rockstar_editor'),  value = 'rockstar_editor'},
             {label = _U('gps_info'), value = 'gps_info'},
             {label = _U('car_info'), value = 'car_info'}
         }}, function(data, menu)
