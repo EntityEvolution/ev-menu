@@ -1345,7 +1345,7 @@ function rockstarEditor()
 
     AddeventHandler("ev-menu:rockstarEditor", function()
         rockstarEditor()
-    end)s
+    end)
 
 
 --THREAD--
