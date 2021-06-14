@@ -304,6 +304,8 @@ function AbrirPersonalMenu()
             end, function(data3, menu2)
                 menu2.close()
             end)
+        elseif data.current.value == 'rockstar_editor' then
+            TriggerEvent("ev-menu:rockstarEditor")
         elseif data.current.value == 'gps_info' then
             ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'gps_menu', {
                 title    = _U('gps_menu'),
@@ -1313,6 +1315,38 @@ AddEventHandler('TakeHostage:cl_stop', function()
 	ClearPedSecondaryTask(PlayerPedId())
 	DetachEntity(PlayerPedId(), true, false)
 end)
+
+--ROCKSTAR EDITOR--
+
+function rockstarEditor()
+    ESX.UI.Open('default', GetCurrentResourceName(), 'client',
+    {
+        title = _U('rockstar_title'),
+        align = Config.Align,
+        elements = {
+            {label = _U('rockstar_record'), value = 'recording'},
+            {label = _U('save_recoring'), value = 'save_recording'},
+            {label = _U('discard_recording', value = 'discard_recording')}
+        }, function(data, menu)
+            if data.current.value == 'recording' then
+                StartRecording(1)
+            elseif data.current.value == ' save_recording' then
+                if(IsRecording()) then
+                    StopRecordingAndsaveClip()
+                end
+            elseif data.current.value == 'discard_recording' then
+                StopRecordingAndDiscardClip()
+            else
+            end
+        end, function(data, menu)
+            menu.close()
+        end)
+    end
+
+    AddeventHandler("ev-menu:rockstarEditor", function()
+        rockstarEditor()
+    end)s
+
 
 --THREAD--
 Citizen.CreateThread(function()

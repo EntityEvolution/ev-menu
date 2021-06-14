@@ -31,6 +31,7 @@ Locales['es'] = {
   --Actions Menu
   ['actions_menu']          = 'Menu de Acciones',
   ['actions_info']          = 'Informacion de acciones',
+  ['rockstar_editor']       = 'Rockstar Editor'
   ['carry_total_label']     = 'Cargar',
   ['carry2_total_label']    = 'Caballito',
   ['carry3_total_label']    = 'Cargar en brazos',
@@ -136,6 +137,12 @@ Locales['es'] = {
   ['destination_false']     = 'Marcador no encontrado, sistema de prevencion activado',
   ['destination_go']        = 'Piloto automatico empezado',
   ['destination_stop']      = 'Piloto automatico cancelado',
+
+    --Rockstar Editor--
+    ["rockstar_title"]        = 'Rockstar Editor',
+    ["rockstar_record"]       = 'Iniciar Grabación',
+    ["save_recording"]        = 'Guardar Grabación',
+    ["discard_recording"]     = 'Descartar Grabación',
   
   --Notifications
   ['no_boss']               = 'No eres el jefe de esta compania',
