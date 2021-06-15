@@ -31,6 +31,7 @@ Locales['en'] = {
   --Actions Menu
   ['actions_menu']          = 'Actions Menu',
   ['actions_info']          = 'Actions Info',
+  ['rockstar_editor']       = 'Rockstar Editor'
   ['carry_total_label']     = 'Carry',
   ['carry2_total_label']    = 'Piggyback',
   ['carry3_total_label']    = 'Baby carry',
@@ -136,7 +137,13 @@ Locales['en'] = {
   ['destination_false']     = 'Waypoint not found, prevention system was activated',
   ['destination_go']        = 'Autopilot has been started',
   ['destination_stop']      = 'Autopilot has been canceled',
-  
+
+  --Rockstar Editor--
+  ["rockstar_title"]        = 'Rockstar Editor',
+  ["rockstar_record"]       = 'Start Recording',
+  ["save_recording"]        = 'Save Recording',
+  ["discard_recording"]     = 'Discard Recording',
+
   --Notifications
   ['no_boss']               = 'You are not the boss of this company',
   ['no_bosst']              = '❌ | You are not the boss of this company',

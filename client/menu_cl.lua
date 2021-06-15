@@ -120,6 +120,7 @@ function AbrirPersonalMenu()
             {label = _U('personal_info'), value = 'personal_info'},
             {label = _U('documents_info'), value = 'documents_info'},
             {label = _U('actions_info'), value = 'actions_info'},
+            {label = _U('rockstar_editor'),  value = 'rockstar_editor'},
             {label = _U('gps_info'), value = 'gps_info'},
             {label = _U('car_info'), value = 'car_info'}
         }}, function(data, menu)
@@ -300,9 +301,33 @@ function AbrirPersonalMenu()
 
                     end
                 end
-            end, function(data3, menu2)
+            end, function(data2, menu2)
                 menu2.close()
             end)
+        elseif data.current.value == 'rockstar_editor' then
+            ESX.UI.Open('default', GetCurrentResourceName(), 'client',
+            {
+                title = _U('rockstar_title'),
+                align = Config.Align,
+                elements = {
+                    {label = _U('rockstar_record'), value = 'recording'},
+                    {label = _U('save_recoring'), value = 'save_recording'},
+                    {label = _U('discard_recording', value = 'discard_recording')}
+                }, function(data2, menu2)
+                    if data2.current.value == 'recording' then
+                        StartRecording(1)
+                    elseif data2.current.value == ' save_recording' then
+                        if IsRecording() then
+                            StopRecordingAndsaveClip()
+                        end
+                    elseif data2.current.value == 'discard_recording' then
+                        StopRecordingAndDiscardClip()
+                    else
+                    end
+                end, function(data2, menu2)
+                    menu2.close()
+                end)
+            end
         elseif data.current.value == 'gps_info' then
             ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'gps_menu', {
                 title    = _U('gps_menu'),
