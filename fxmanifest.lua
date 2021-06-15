@@ -4,9 +4,9 @@ game 'gta5'
 
 lua54 'yes'
 
-description 'Personal menu by Project Entity (integrated with carry by Rob)'
+description 'Personal menu by Entity Evolution (integrated with carry by Rob)'
 
-version '0.2.0'
+version '1.0.0'
 
 shared_script {
     'config.lua'
