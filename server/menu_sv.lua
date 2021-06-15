@@ -2,7 +2,7 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-ESX.RegisterServerCallback('pe-menu:getData', function(source, cb)
+ESX.RegisterServerCallback('ev-menu:getData', function(source, cb)
     local xPlayer = ESX.GetPlayerFromId(source)
     local result = MySQL.Sync.fetchAll("SELECT users.phone_number FROM users WHERE users.identifier = @identifier", {['@identifier'] = xPlayer.identifier})
     local data = {}
