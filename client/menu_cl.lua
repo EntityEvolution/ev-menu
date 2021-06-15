@@ -1338,41 +1338,6 @@ AddEventHandler('TakeHostage:cl_stop', function()
 	DetachEntity(PlayerPedId(), true, false)
 end)
 
-<<<<<<< HEAD
-=======
---ROCKSTAR EDITOR--
-
-function rockstarEditor()
-    ESX.UI.Open('default', GetCurrentResourceName(), 'client',
-    {
-        title = _U('rockstar_title'),
-        align = Config.Align,
-        elements = {
-            {label = _U('rockstar_record'), value = 'recording'},
-            {label = _U('save_recoring'), value = 'save_recording'},
-            {label = _U('discard_recording', value = 'discard_recording')}
-        }, function(data, menu)
-            if data.current.value == 'recording' then
-                StartRecording(1)
-            elseif data.current.value == ' save_recording' then
-                if(IsRecording()) then
-                    StopRecordingAndsaveClip()
-                end
-            elseif data.current.value == 'discard_recording' then
-                StopRecordingAndDiscardClip()
-            else
-            end
-        end, function(data, menu)
-            menu.close()
-        end)
-    end
-
-    AddeventHandler("ev-menu:rockstarEditor", function()
-        rockstarEditor()
-    end)
-
-
->>>>>>> 2dec4ebde10d91cb3c44b1418dc2b4e879f5fe57
 --THREAD--
 Citizen.CreateThread(function()
 	while true do
