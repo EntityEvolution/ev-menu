@@ -8,7 +8,7 @@
  - Car Menu (doors, windows, etc)
  - Integrated carry menu
  - Documents Menu
- - Infomation menu
+ - Information menu
 
 ## Acknowledgements
   - [Carry | Hostage | Carry on Arms](https://github.com/rubbertoe98)
