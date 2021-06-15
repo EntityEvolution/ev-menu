@@ -317,7 +317,7 @@ function AbrirPersonalMenu()
                     if data2.current.value == 'recording' then
                         StartRecording(1)
                     elseif data2.current.value == ' save_recording' then
-                        if(IsRecording()) then
+                        if IsRecording() then
                             StopRecordingAndsaveClip()
                         end
                     elseif data2.current.value == 'discard_recording' then
