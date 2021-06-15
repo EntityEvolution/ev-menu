@@ -125,7 +125,7 @@ function AbrirPersonalMenu()
             {label = _U('car_info'), value = 'car_info'}
         }}, function(data, menu)
         if data.current.value == 'personal_info' then
-        ESX.TriggerServerCallback('pe-menu:getData', function(receivedData)
+        ESX.TriggerServerCallback('ev-menu:getData', function(receivedData)
             ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'personal_info', {
                 title    = _U('personal_info'),
                 align    = Config.Align,
@@ -193,7 +193,7 @@ function AbrirPersonalMenu()
             end)
         end)
         elseif data.current.value == 'documents_info' then
-        ESX.TriggerServerCallback('pe-menu:getData', function(receivedData)
+        ESX.TriggerServerCallback('ev-menu:getData', function(receivedData)
             ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'documents_menu', {
                 title    = _U('documents_menu'),
                 align    = Config.Align,
