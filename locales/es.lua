@@ -31,7 +31,7 @@ Locales['es'] = {
   --Actions Menu
   ['actions_menu']          = 'Menu de Acciones',
   ['actions_info']          = 'Informacion de acciones',
-  ['rockstar_editor']       = 'Rockstar Editor'
+  ['rockstar_editor']       = 'Rockstar Editor',
   ['carry_total_label']     = 'Cargar',
   ['carry2_total_label']    = 'Caballito',
   ['carry3_total_label']    = 'Cargar en brazos',
