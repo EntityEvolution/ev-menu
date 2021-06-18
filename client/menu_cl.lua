@@ -313,19 +313,18 @@ function AbrirPersonalMenu()
                     {label = _U('save_recoring'), value = 'save_recording'},
                     {label = _U('discard_recording'), value = 'discard_recording'}
                 }}, function(data2, menu2)
-                    if data2.current.value == 'recording' then
-                        StartRecording(1)
-                    elseif data2.current.value == ' save_recording' then
-                        if IsRecording() then
-                            StopRecordingAndsaveClip()
-                        end
-                    elseif data2.current.value == 'discard_recording' then
-                        StopRecordingAndDiscardClip()
+                if data2.current.value == 'recording' then
+                    StartRecording(1)
+                elseif data2.current.value == ' save_recording' then
+                    if IsRecording() then
+                        StopRecordingAndsaveClip()
                     end
-                end, function(data2, menu2)
-                    menu2.close()
-                end)
-            end
+                elseif data2.current.value == 'discard_recording' then
+                    StopRecordingAndDiscardClip()
+                end
+            end, function(data2, menu2)
+                menu2.close()
+            end)
         elseif data.current.value == 'gps_info' then
             ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'gps_menu', {
                 title    = _U('gps_menu'),
