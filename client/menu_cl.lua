@@ -305,15 +305,14 @@ function AbrirPersonalMenu()
                 menu2.close()
             end)
         elseif data.current.value == 'rockstar_editor' then
-            ESX.UI.Open('default', GetCurrentResourceName(), 'client',
-            {
+            ESX.UI.Open('default', GetCurrentResourceName(), 'client', {
                 title = _U('rockstar_title'),
                 align = Config.Align,
                 elements = {
                     {label = _U('rockstar_record'), value = 'recording'},
                     {label = _U('save_recoring'), value = 'save_recording'},
-                    {label = _U('discard_recording', value = 'discard_recording')}
-                }, function(data2, menu2)
+                    {label = _U('discard_recording'), value = 'discard_recording'}
+                }}, function(data2, menu2)
                     if data2.current.value == 'recording' then
                         StartRecording(1)
                     elseif data2.current.value == ' save_recording' then
@@ -322,7 +321,6 @@ function AbrirPersonalMenu()
                         end
                     elseif data2.current.value == 'discard_recording' then
                         StopRecordingAndDiscardClip()
-                    else
                     end
                 end, function(data2, menu2)
                     menu2.close()
