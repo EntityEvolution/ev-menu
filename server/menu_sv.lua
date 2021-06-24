@@ -31,11 +31,10 @@ ESX.RegisterServerCallback('ev-menu:getData', function(source, cb)
             phone   = _U('no_phone')
         }
     end
-
-    if xPlayer.get('sex') == 'm' then 
-        data.sex = 'male' 
-    else 
-        data.sex = 'female' 
+    if xPlayer.get('sex') == 'm' then
+        data.sex = 'male'
+    else
+        data.sex = 'female'
     end
     cb(data)
 end)
