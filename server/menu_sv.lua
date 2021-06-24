@@ -4,7 +4,9 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback('ev-menu:getData', function(source, cb)
     local xPlayer = ESX.GetPlayerFromId(source)
-    local result = MySQL.Sync.fetchAll("SELECT users.phone_number FROM users WHERE users.identifier = @identifier", {['@identifier'] = xPlayer.identifier})
+    local result = MySQL.Sync.fetchAll("SELECT users.phone_number FROM users WHERE users.identifier = @identifier", {
+		['@identifier'] = xPlayer.identifier}
+	)
     local data = {}
 	if result[1] ~= nil and result[1].phone_number ~= nil then
         data   = {
@@ -27,7 +29,6 @@ ESX.RegisterServerCallback('ev-menu:getData', function(source, cb)
             sex     = xPlayer.get('sex'),
             height  = xPlayer.get('height'),
             phone   = _U('no_phone')
-
         }
     end
 
