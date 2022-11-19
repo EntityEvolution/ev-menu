@@ -11,11 +11,11 @@ Locales['en'] = {
   ['job_grade_label']       = 'Rank: ',
 
   ['identity_label']        = 'Identity',
-  ['real_name_label']       = 'Name: ',
-  ['dob_label']             = 'DOB: ',
-  ['height_label']          = 'Height: %s',
-  ['sex_label']             = 'Sex: ',
-  ['phone_label']           = 'Phone number: %s',
+  ['real_name_label']       = 'Name : ',
+  ['dob_label']             = 'DOB : ',
+  ['height_label']          = 'Height : %s',
+  ['sex_label']             = 'Sex : ',
+  ['phone_label']           = 'Phone number : %s',
   ['no_phone']              = 'No phone number',
  
   --Documents Menu
